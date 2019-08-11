@@ -1,4 +1,4 @@
-{% set version = '7.4.0' %}
+{% set version = '7.5.2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/drake_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/drake/drake_{{ version }}.tar.gz
-  sha256: 3aa6e62c4406561af625d49b7500a8851c7cfc1611b740d2c4554e9db9a55c90
+  sha256: 60747b30f5a6ba1b9f54f5903a824a8bd37e31955457c4a11b8c8e2d270790a1
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -35,6 +35,7 @@ requirements:
     - r-igraph
     - r-rlang >=0.2.0
     - r-storr >=1.1.0
+    - r-txtq >=0.1.3
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
@@ -43,6 +44,7 @@ requirements:
     - r-igraph
     - r-rlang >=0.2.0
     - r-storr >=1.1.0
+    - r-txtq >=0.1.3
 
 test:
   commands:
@@ -71,7 +73,7 @@ extra:
 # Package: drake
 # Title: A Pipeline Toolkit for Reproducible Computation at Scale
 # Description: A general-purpose computational engine for data analysis, drake rebuilds intermediate data objects when their dependencies change, and it skips work when the results are already up to date. Not every execution starts from scratch, there is native support for parallel and distributed computing, and completed projects have tangible evidence that they are reproducible. Extensive documentation, from beginner-friendly tutorials to practical examples and more, is available at the reference website <https://ropensci.github.io/drake/> and the online manual <https://ropenscilabs.github.io/drake-manual/>.
-# Version: 7.4.0
+# Version: 7.5.2
 # License: GPL-3
 # URL: https://github.com/ropensci/drake
 # BugReports: https://github.com/ropensci/drake/issues
@@ -88,4 +90,4 @@ extra:
 # Author: William Michael Landau [aut, cre] (<https://orcid.org/0000-0003-1878-3253>), Alex Axthelm [ctb], Jasper Clarkberg [ctb], Kirill Muller [ctb], Ben Bond-Lamberty [ctb] (<https://orcid.org/0000-0001-9525-4633>), Tristan Mahr [ctb] (<https://orcid.org/0000-0002-8890-5116>), Miles McBain [ctb] (<https://orcid.org/0000-0003-2865-2548>), Ben Marwick [rev], Peter Slaughter [rev], Eli Lilly and Company [cph]
 # Maintainer: William Michael Landau <will.landau@gmail.com>
 # Repository: CRAN
-# Date/Publication: 2019-06-07 16:00:03 UTC
+# Date/Publication: 2019-07-21
