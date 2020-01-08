@@ -1,4 +1,4 @@
-{% set version = "7.8.0" %}
+{% set version = "7.9.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/drake_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/drake/drake_{{ version }}.tar.gz
-  sha256: 6d9b7e594988b4c13751f28b559e426ed67fff5435b4fc14bb76ee1100d82d69
+  sha256: 63054ed9330930c262d03c411087dc5c69a5d6e51bba7da1e8e716133d096ddc
 
 build:
   merge_build_host: True  # [win]
