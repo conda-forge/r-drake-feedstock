@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -31,7 +31,7 @@ requirements:
   host:
     - r-base
     - r-base64url
-    - r-digest
+    - r-digest >=0.6.21
     - r-igraph
     - r-rlang >=0.2.0
     - r-storr >=1.1.0
@@ -41,7 +41,7 @@ requirements:
     - r-base
     - {{native}}gcc-libs         # [win]
     - r-base64url
-    - r-digest
+    - r-digest >=0.6.21
     - r-igraph
     - r-rlang >=0.2.0
     - r-storr >=1.1.0
