@@ -35,17 +35,19 @@ requirements:
     - r-igraph
     - r-rlang >=0.2.0
     - r-storr >=1.1.0
-    - r-txtq >=0.1.3
+    - r-tidyselect >=1.0.0
+    - r-txtq >=0.2.3
     - r-vctrs >=0.2.0
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
+    - {{native}}gcc-libs         # [win]
     - r-base64url
     - r-digest >=0.6.21
     - r-igraph
     - r-rlang >=0.2.0
     - r-storr >=1.1.0
-    - r-txtq >=0.1.3
+    - r-tidyselect >=1.0.0
+    - r-txtq >=0.2.3
     - r-vctrs >=0.2.0
 
 test:
@@ -55,11 +57,12 @@ test:
 
 about:
   home: https://github.com/ropensci/drake
-  license: GPL-3
+  license: GPL-3.0-only
   summary: A general-purpose computational engine for data analysis, drake rebuilds intermediate data objects when their dependencies change, and it skips work when the results are already up to date. Not every execution starts from scratch, there is native support for parallel and distributed computing, and completed projects
     have tangible evidence that they are reproducible. Extensive documentation, from beginner-friendly tutorials to practical examples and more, is available at the reference website <https://ropensci.github.io/drake/> and the online manual <https://ropenscilabs.github.io/drake-manual/>.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
