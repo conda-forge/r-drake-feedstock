@@ -1,4 +1,4 @@
-{% set version = "7.12.4" %}
+{% set version = "7.12.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/drake_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/drake/drake_{{ version }}.tar.gz
-  sha256: d5b30e00cb960d48cc7566e70ffff16920aceebb9b671440836d220d7c17f80a
+  sha256: ca787082cd7ce642ee978bf1086a9b3d33d6efa7315313bdbeeac46c1e1e4abc
 
 build:
   merge_build_host: true  # [win]
@@ -40,7 +40,7 @@ requirements:
     - r-vctrs >=0.2.0
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - r-base64url
     - r-digest >=0.6.21
     - r-igraph
