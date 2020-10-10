@@ -5,11 +5,9 @@ Home: https://github.com/ropensci/drake
 
 Package license: GPL-3.0-only
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-drake-feedstock/blob/master/LICENSE.txt)
 
 Summary: A general-purpose computational engine for data analysis, drake rebuilds intermediate data objects when their dependencies change, and it skips work when the results are already up to date. Not every execution starts from scratch, there is native support for parallel and distributed computing, and completed projects have tangible evidence that they are reproducible. Extensive documentation, from beginner-friendly tutorials to practical examples and more, is available at the reference website <https://ropensci.github.io/drake/> and the online manual <https://ropenscilabs.github.io/drake-manual/>.
-
-
 
 Current build status
 ====================
