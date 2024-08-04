@@ -1,6 +1,5 @@
 {% set version = "7.13.10" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-drake
@@ -13,9 +12,9 @@ source:
   sha256: 38f777000d2bdaf04a64de9e5e37525eb037347d5b62ba11a4fd43c128dea8d9
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
-  skip: true  # [win]
+  number: 1
+  # Checking windows to see if it passes. Uncomment the line if it fails.
+  # skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -43,7 +42,6 @@ requirements:
     - r-vctrs >=0.2.0
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-base64url
     - r-digest >=0.6.21
     - r-igraph
