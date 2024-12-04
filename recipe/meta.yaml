@@ -1,4 +1,4 @@
-{% set version = "7.13.10" %}
+{% set version = "7.13.11" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/drake_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/drake/drake_{{ version }}.tar.gz
-  sha256: 38f777000d2bdaf04a64de9e5e37525eb037347d5b62ba11a4fd43c128dea8d9
+  sha256: 4de93e210268af4cc1aa8650fd0fd9b042685a30b47a00d49d22ac9ed8ea4b45
 
 build:
-  number: 1
+  number: 0
   # Checking windows to see if it passes. Uncomment the line if it fails.
   # skip: true  # [win]
   rpaths:
